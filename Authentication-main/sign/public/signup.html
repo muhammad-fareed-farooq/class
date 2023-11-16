@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-database.js"></script>
+
+
+</head>
+
+<style>
+
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    body{
+        background-color: rgb(237, 237, 237);
+        margin-top: 80px;
+        /* align-items: center; */
+        font-size: 23px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    .main{
+        /* background-color: black; */
+        display: flex;
+        justify-content: center;
+    
+        
+    }
+    .pap{
+        /* border: 1px solid gray; */
+        /* padding: 10px; */
+        color: black;
+        width: 350px;
+        /* height: 350px; */
+        text-align: center;
+        background-color: white;
+        box-shadow: 0px 0px 10px white;
+    }
+
+    #name{
+        width: 270px;
+        height: 30px;
+        border-radius: 15px;
+        padding: 8px;
+        border: 1px solid rgb(237, 237, 237);   
+    }
+    #number{
+        width: 270px;
+        height: 30px;
+        border-radius: 15px;
+        padding: 8px;
+        border: 1px solid rgb(237, 237, 237);
+    }
+
+    #date{
+        width: 270px;
+        height: 30px;
+        border-radius: 15px;
+        padding: 8px;
+        border: 1px solid rgb(237, 237, 237);
+    }
+    
+
+    #email{
+        width: 270px;
+        height: 30px;
+        border-radius: 15px;
+        padding: 8px;
+        border: 1px solid rgb(237, 237, 237);
+        
+    }
+     
+    #password{
+        width: 270px;
+        height: 30px;
+        border-radius: 15px;
+        padding: 8px;
+        border: 1px solid rgb(237, 237, 237);
+
+    }
+    
+.button{ 
+
+    font-size: 25px;
+    width: 100px;
+    height: 50px;
+    background: linear-gradient(45deg, rgba(255,231,2,1) 0%, rgba(222,230,136,1) 35%, rgba(131,218,130,1) 69%, rgba(145,222,17,1) 100%);
+    border-radius: 10px;
+    margin-bottom: 15px;
+    border: none;
+
+}
+.button:hover{
+    background: transparent;
+    border: 1px solid rgb(237, 237, 237);
+}
+.linear{
+    background: linear-gradient(45deg, rgba(255,231,2,1) 0%, rgba(222,230,136,1) 35%, rgba(131,218,130,1) 69%, rgba(145,222,17,1) 100%);
+        padding: 20px;
+        color: rgb(0, 0, 0);
+        text-align: center;
+        /* border-start-start-radius: 15px; */
+        top: 0;
+        /* border-start-end-radius: 15px; */
+}
+.google{
+    font-size: 25px;
+    width: 100px;
+    height: 50px;
+    background: linear-gradient(45deg, rgba(255,231,2,1) 0%, rgba(222,230,136,1) 35%, rgba(131,218,130,1) 69%, rgba(145,222,17,1) 100%);
+    border-radius: 10px;
+    margin-bottom: 15px;
+    border: none;
+    font-size: 15px; 
+    font-weight: 600;
+     /* padding: 5px; */
+     display: inline-block;
+}
+.google:hover{
+    background: transparent;
+    border: 1px solid rgb(237, 237, 237);
+}
+.github{
+    font-size: 25px;
+    width: 100px;
+    height: 50px;
+    background: linear-gradient(45deg, rgba(255,231,2,1) 0%, rgba(222,230,136,1) 35%, rgba(131,218,130,1) 69%, rgba(145,222,17,1) 100%);
+    border-radius: 10px;
+    margin-bottom: 15px;
+    border: none;
+    font-size: 15px; 
+    font-weight: 600;
+     padding: 5px;
+     display: inline-block;
+}
+.github:hover{
+    background: transparent;
+    border: 1px solid rgb(237, 237, 237);
+}
+
+</style>
+<body>
+
+
+    <div  class="main">
+     <div class="pap">
+
+        <h1 class="linear">Sign up</h1>
+        <br>
+
+       
+    
+       
+        
+        <input required placeholder="Enter Full Name" type="name" id="name">
+        
+        <br><br>
+        <input required placeholder="Enter contact Number" type="number" id="number">
+<br><br>
+        
+<input placeholder="Enter date of birth" type="date" id="date">
+        <br><br>
+
+        <input required placeholder="Enter email" type="email" id="email">
+        <br><br>
+        <input required placeholder="Enter password" type="password" id="password">
+<br><br>
+    
+        <button class="button" id="btn" onclick="getNext()">Next</button>
+        <br>
+        
+        
+        <button class="google" onclick="loginWithGoogle()">login google</button>
+
+        <button class="github" onclick="logingithub()">login github</button>
+        <br>
+        <a style="font-size: 15px; text-decoration: underline;" href="./signin.html">Already have an account! Sign in..</a>
+
+     </div>
+    
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
